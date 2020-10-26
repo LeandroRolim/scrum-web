@@ -17,3 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     .webpackConfig(require('./webpack.config'));
+
+mix.browserSync('localhost:8000');
+mix.disableNotifications();
