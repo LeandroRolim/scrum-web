@@ -17,11 +17,16 @@
 
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
+
+        {{-- font awesome --}}
+        <script src="https://kit.fontawesome.com/e7d4c0d3e7.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-dropdown')
-
+            <div class="bg-red-700 text-center text-white p-4 font-bold" wire:offline>
+                Sem conexão com a internet
+            </div>
             <!-- Page Heading -->
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">

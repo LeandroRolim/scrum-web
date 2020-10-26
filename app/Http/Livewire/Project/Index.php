@@ -2,14 +2,24 @@
 
 namespace App\Http\Livewire\Project;
 
+use App\Models\Project;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Index extends Component
 {
-    public $header = 'Projects';
+    use WithPagination;
+    public string $search = '';
 
-    public function render()
+    public function updatingSearch()
     {
-        return view('livewire.project.index');
+        $this->resetPage();
+    }
+
+    public function getProjectsProperty()
+    {
+        return Project::where('user_id', auth()->id())
+                ->where('name', 'like', "%{$this->search}%")
+                ->paginate();
     }
 }
