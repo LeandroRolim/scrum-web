@@ -30,7 +30,7 @@
                         {{ $item->name }}
                     </td>
                     <td class="text-green-700 text-right">
-                        <a href="#" class="mx-4">
+                        <a href="{{ route('project.members', $item->id) }}" class="mx-4">
                             <i class="fas fa-users"></i>
                         </a>
                         <a href="#">
