@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Livewire\HomePage;
 use App\Http\Livewire\Project\Create;
 use App\Http\Livewire\Project\Index;
+use App\Http\Livewire\Project\Tasks;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,5 +26,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('projects', Index::class)->name('project.index');
     Route::get('projects/create', Create::class)->name('project.create');
-    // Route::get('projects/tasks/{project}', Show::class)->name('project.tasks');
+    Route::get('projects/{project}/tasks', Tasks::class)->name('project.tasks');
 });

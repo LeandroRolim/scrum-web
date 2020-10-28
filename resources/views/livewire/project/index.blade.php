@@ -33,7 +33,7 @@
                         <a href="#" class="mx-4">
                             <i class="fas fa-users"></i>
                         </a>
-                        <a href="#">
+                        <a href="{{ route('project.tasks', $item->id) }}">
                             <i class="fas fa-tasks"></i>
                         </a>
                     </td>
