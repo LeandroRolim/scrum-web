@@ -19,7 +19,7 @@ class Index extends Component
     public function getProjectsProperty()
     {
         return Project::where('user_id', auth()->id())
-                ->where('name', 'like', "%{$this->search}%")
-                ->paginate();
+            ->where('name', 'like', "%{$this->search}%")
+            ->paginate();
     }
 }
