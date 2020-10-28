@@ -46,7 +46,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="3">Cadastre seu primeiro projeto no icon "+" acima</td>
+                    <td colspan="3">{{ __('Empty') }}</td>
                 </tr>
             @endforelse
         </tbody>
