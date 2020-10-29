@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use App\Http\Livewire\HomePage;
 use App\Http\Livewire\Project\Create;
 use App\Http\Livewire\Project\Index;
