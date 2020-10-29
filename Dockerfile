@@ -8,7 +8,7 @@ RUN yarn run prod
 
 FROM phpswoole/swoole:latest
 
-RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install pdo_mysql pdo_pgsql
 
 WORKDIR /var/www
 
