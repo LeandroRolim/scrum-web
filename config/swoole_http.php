@@ -10,12 +10,12 @@ return [
     |
     */
     'server' => [
-        'host' => env('SWOOLE_HTTP_HOST', '0.0.0.0'),
-        'port' => env('SWOOLE_HTTP_PORT', '8000'),
+        'host' => env('HOST', '0.0.0.0'),
+        'port' => env('PORT', '8000'),
         'public_path' => base_path('public'),
         // Determine if to use swoole to respond request for static files
         'handle_static_files' => env('SWOOLE_HANDLE_STATIC', true),
-        'access_log' => env('SWOOLE_HTTP_ACCESS_LOG', false),
+        'access_log' => env('SWOOLE_HTTP_ACCESS_LOG', true),
         // You must add --enable-openssl while compiling Swoole
         // Put `SWOOLE_SOCK_TCP | SWOOLE_SSL` if you want to enable SSL
         'socket_type' => SWOOLE_SOCK_TCP,
