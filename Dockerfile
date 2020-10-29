@@ -8,6 +8,8 @@ RUN yarn run prod
 
 FROM phpswoole/swoole:latest
 
+RUN docker-php-ext-install pdo_mysql
+
 WORKDIR /var/www
 
 # Copy existing application directory permissions
@@ -16,9 +18,8 @@ COPY --from=0 ./public/css ./public/css
 COPY --from=0 ./public/js ./public/js
 RUN composer install \
     --no-interaction \
-    --quiet \
     --no-dev
 
 EXPOSE 8000
 
-ENTRYPOINT ["php", "artisan", "swoole:http", "start"]
+CMD ["php", "artisan", "swoole:http", "start"]
