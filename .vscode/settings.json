@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:aula-liveware}/database/database.sqlite",
+            "name": "scrum-db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
