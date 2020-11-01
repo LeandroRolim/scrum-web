@@ -46,4 +46,9 @@ class Tasks extends Component
         $this->project->tasks()->where('uuid', $task_id)->delete();
         $this->project->load('tasks');
     }
+
+    public function voting()
+    {
+        return redirect()->route('project.voting');
+    }
 }
