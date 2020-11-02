@@ -9,7 +9,7 @@ use Livewire\WithPagination;
 class Index extends Component
 {
     use WithPagination;
-    public string $search = '';
+    public ?string $search = null;
 
     public function updatingSearch()
     {
@@ -19,7 +19,7 @@ class Index extends Component
     public function getProjectsProperty()
     {
         $query = Project::where('user_id', auth()->id());
-        if(strlen($this->search) > 0) {
+        if (strlen($this->search) > 0) {
             $query->where('name', 'like', "%{$this->search}%");
         }
         return $query->paginate();

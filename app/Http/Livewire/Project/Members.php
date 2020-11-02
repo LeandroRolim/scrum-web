@@ -12,7 +12,7 @@ class Members extends Component
     use AuthorizesRequests;
     public Project $project;
 
-    public string $email = '';
+    public ?string $email = null;
 
     public function mount()
     {

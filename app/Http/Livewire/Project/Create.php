@@ -7,7 +7,8 @@ use Livewire\Component;
 
 class Create extends Component
 {
-    public string $name = "";
+    public ?string $name = null;
+
     protected array $rules = [
         'name' => 'required|min:4'
     ];

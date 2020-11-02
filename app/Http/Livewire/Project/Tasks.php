@@ -19,8 +19,8 @@ class Tasks extends Component
         'description' => 'required|min:5',
     ];
 
-    public string $title = '';
-    public string $description = '';
+    public ?string $title = null;
+    public ?string $description = null;
 
     public function mount()
     {
